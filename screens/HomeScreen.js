@@ -12,7 +12,11 @@ export default function Home(){
                 </View>
                 <Text className=" font-bold text-3xl text-[#2A2B4B]  ">Travel</Text>
             </View>
-
+{/*second section */}
+            <View className="px-6 mt-8 space-y-3">
+                <Text className="text-[42px] text-[#3C6072]" >Enjoy the trip with</Text>
+                <Text className="text-[38px] text-[#00BCC9] font-bold">Good Moments</Text>
+            </View>
 
 
         </SafeAreaView>
