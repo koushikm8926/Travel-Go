@@ -4,10 +4,10 @@
     "slug": "travel",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/applogo.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/applogo.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

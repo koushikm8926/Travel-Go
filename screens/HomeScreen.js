@@ -1,7 +1,8 @@
-import React from "react";
-import { SafeAreaView } from "react-native";
-import { View,Text,Image  } from "react-native";
+import React, {useLayoutEffect} from "react";
+import { View,Text,Image ,SafeAreaView, TouchableOpacity } from "react-native";
 import { Heroimage } from "../assets";
+import * as Animatable from 'react-native-animatable';
+
 
 export default function Home(){
     return(
@@ -24,9 +25,23 @@ export default function Home(){
             <View className="h-[300px] w-[300px] bg-[#00BCC9] rounded-full absolute bottom-36 -right-36"></View>         
             <View className="h-[300px] w-[300px] bg-[#E99265] rounded-full absolute -bottom-28 -left-36"></View>         
 {/*image */}
-            <View className="flex-1 relative items-center justify-content ">
-           <Image source={Heroimage} className="object-cover w-full h-full mt-20"></Image>
+<View className="flex-1 relative items-center justify-content ">
+           <Animatable.Image 
+           animation="fadeIn"
+           easing="ease-in-out"
+           source={Heroimage} className="object-cover w-full h-full mt-20"/>
+
+{/*button */}     
+
+           <View className="absolute bottom-20 h-24 w-24 border-r-2 border-l-2 border-t-4 border-[#00BCC9] rounded-full justify-center items-center ">
+               <TouchableOpacity>
+                    <View className="w-20 h-20 items-center justify-center rounded-full bg-[#00BCC9]">
+                        <Text className="font-semibold text-[36px] text-green-50 ">Go</Text>
+                    </View>
+                </TouchableOpacity>
+
             </View>
+</View>
         </SafeAreaView>
     );
 }
