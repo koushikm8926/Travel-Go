@@ -2,12 +2,16 @@ import React, {useLayoutEffect} from "react";
 import { View,Text,Image ,SafeAreaView, TouchableOpacity } from "react-native";
 import { Heroimage } from "../assets";
 import * as Animatable from 'react-native-animatable';
+import { useNavigation } from "@react-navigation/native";
 
 
 export default function Home(){
+
+const navigation =useNavigation();
+
     return(
         <SafeAreaView className="bg-white relative"  style={{flex: 1, paddingTop: Platform.OS === 'android' ? 25 : 0}}>
-          {/*first section */}
+{/*first section */}
             <View className="flex-row px-6 mt-7 items-center space-x-2">
                 <View className="h-16 w-16 bg-black rounded-full items-center justify-center">
                     <Text className="text-[#00BCC9] text-3xl font-semibold">Go</Text>
@@ -29,12 +33,11 @@ export default function Home(){
            <Animatable.Image 
            animation="fadeIn"
            easing="ease-in-out"
-           source={Heroimage} className="object-cover w-full h-full mt-20"/>
+           source={Heroimage} className="object-cover w-full h-full mt-20"></Animatable.Image>
 
 {/*button */}     
-
            <View className="absolute bottom-20 h-24 w-24 border-r-2 border-l-2 border-t-4 border-[#00BCC9] rounded-full justify-center items-center ">
-               <TouchableOpacity>
+               <TouchableOpacity onPress={()=> navigation.navigate("Discover")} >
                     <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}
                      className="w-20 h-20 items-center justify-center rounded-full bg-[#00BCC9]">
                         <Text className="font-semibold text-[36px] text-green-50 ">Go</Text>
