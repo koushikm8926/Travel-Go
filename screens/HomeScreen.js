@@ -35,9 +35,10 @@ export default function Home(){
 
            <View className="absolute bottom-20 h-24 w-24 border-r-2 border-l-2 border-t-4 border-[#00BCC9] rounded-full justify-center items-center ">
                <TouchableOpacity>
-                    <View className="w-20 h-20 items-center justify-center rounded-full bg-[#00BCC9]">
+                    <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}
+                     className="w-20 h-20 items-center justify-center rounded-full bg-[#00BCC9]">
                         <Text className="font-semibold text-[36px] text-green-50 ">Go</Text>
-                    </View>
+                    </Animatable.View>
                 </TouchableOpacity>
 
             </View>
